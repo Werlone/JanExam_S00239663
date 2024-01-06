@@ -21,15 +21,14 @@
         <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Height="25" Margin="497,70,0,0" VerticalAlignment="Top" Width="49"/>
         <Label x:Name="lblDate" Content="Date" HorizontalAlignment="Left" Height="30" Margin="497,111,0,0" VerticalAlignment="Top" Width="41"/>
         <Label x:Name="lblAmount" Content="Amount" HorizontalAlignment="Left" Height="24" Margin="497,146,0,0" VerticalAlignment="Top" Width="59"/>
-        <RadioButton x:Name="radioIncome" Content="Income" HorizontalAlignment="Left" Margin="505,196,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioIncome" Content="Income" HorizontalAlignment="Left" Margin="505,196,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <RadioButton x:Name="radioExpense" Content="Expense" HorizontalAlignment="Left" Margin="616,196,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkRecurring" Content="Recurring" HorizontalAlignment="Left" Margin="497,239,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkRecurring" Content="Recurring" HorizontalAlignment="Left" Margin="497,239,0,0" VerticalAlignment="Top" IsChecked="False"/>
         <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Height="30" Margin="497,270,0,0" VerticalAlignment="Top" Width="71" Click="btnRemove_Click"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="30" Margin="602,270,0,0" VerticalAlignment="Top" Width="76"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="30" Margin="602,270,0,0" VerticalAlignment="Top" Width="76" Click="btnAdd_Click"/>
         <Label x:Name="lblBalance" Content="" HorizontalAlignment="Left" Height="31" Margin="155,331,0,0" VerticalAlignment="Top" Width="58"/>
-        <TextBox HorizontalAlignment="Left" Margin="400,424,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <DatePicker x:Name="datePick" HorizontalAlignment="Left" Height="30" Margin="563,111,0,0" VerticalAlignment="Top" Width="115"/>
-        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="25" Margin="563,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.5,0.5">
+        <DatePicker x:Name="datePick" HorizontalAlignment="Left" Height="30" Margin="563,111,0,0" VerticalAlignment="Top" Width="115" SelectedDateFormat="Short"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="25" Margin="563,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -40,6 +39,7 @@
             </TextBox.RenderTransform>
         </TextBox>
         <TextBox x:Name="tbAmount" HorizontalAlignment="Left" Height="24" Margin="563,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115"/>
+        <Label x:Name="lblError" Content="" HorizontalAlignment="Left" Height="41" Margin="497,331,0,0" VerticalAlignment="Top" Width="242"/>
 
     </Grid>
 </Window>
