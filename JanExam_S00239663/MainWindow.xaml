@@ -24,10 +24,22 @@
         <RadioButton x:Name="radioIncome" Content="Income" HorizontalAlignment="Left" Margin="505,196,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="radioExpense" Content="Expense" HorizontalAlignment="Left" Margin="616,196,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkRecurring" Content="Recurring" HorizontalAlignment="Left" Margin="497,239,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Height="30" Margin="497,270,0,0" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Height="30" Margin="497,270,0,0" VerticalAlignment="Top" Width="71" Click="btnRemove_Click"/>
         <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="30" Margin="602,270,0,0" VerticalAlignment="Top" Width="76"/>
         <Label x:Name="lblBalance" Content="" HorizontalAlignment="Left" Height="31" Margin="155,331,0,0" VerticalAlignment="Top" Width="58"/>
         <TextBox HorizontalAlignment="Left" Margin="400,424,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DatePicker x:Name="datePick" HorizontalAlignment="Left" Height="30" Margin="563,111,0,0" VerticalAlignment="Top" Width="115"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="25" Margin="563,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="103" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="tbAmount" HorizontalAlignment="Left" Height="24" Margin="563,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115"/>
 
     </Grid>
 </Window>
