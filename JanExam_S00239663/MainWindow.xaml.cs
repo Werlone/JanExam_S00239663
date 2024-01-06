@@ -18,6 +18,12 @@ namespace JanExam_S00239663
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
+
+    //Didnt manage search in time
+    //GitHub Link
+    //
     public partial class MainWindow : Window
     {
         //global variables
@@ -90,7 +96,31 @@ namespace JanExam_S00239663
         //button on click
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
+
+            //isnt working properly, idea is good I think, I messed up by making only one list, no time to change
+            int index = 0;
+            if (lbIncome.SelectedIndex != -1)
+            {
+                foreach (var item in items)
+                {
+                    if(item.Type == "expense") index++;
+                }
+                lbIncome.Items.RemoveAt(lbIncome.SelectedIndex);
+                items.RemoveAt(index+lbIncome.SelectedIndex);
+            }
+            if (lbExpenses.SelectedIndex != -1)
+            {
+                foreach (var item in items)
+                {
+                    if (item.Type == "income") index++;
+                }
+                lbExpenses.Items.RemoveAt(lbExpenses.SelectedIndex);
+                items.RemoveAt(index+lbExpenses.SelectedIndex);
+            }
+
             
+
+            Totals();
            
         }
 
@@ -132,5 +162,15 @@ namespace JanExam_S00239663
         }
 
 
+        //dont remove in two listboxes at once
+        private void lbIncome_GotFocus(object sender, RoutedEventArgs e)
+        {
+            lbExpenses.SelectedIndex = -1;
+        }
+
+        private void lbExpenses_GotFocus(object sender, RoutedEventArgs e)
+        {
+            lbIncome.SelectedIndex = -1;
+        }
     }
 }
