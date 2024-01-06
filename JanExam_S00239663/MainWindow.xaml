@@ -7,6 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label x:Name="lblIncomeList" Content="Income" HorizontalAlignment="Left" Height="32" Margin="39,29,0,0" VerticalAlignment="Top" Width="86" FontSize="20"/>
+        <Label x:Name="lblExpensesList" Content="Expenses" HorizontalAlignment="Left" Height="33" Margin="263,29,0,0" VerticalAlignment="Top" Width="96" FontSize="20"/>
+        <ListBox x:Name="lbIncome" HorizontalAlignment="Left" Height="200" Margin="39,70,0,0" VerticalAlignment="Top" Width="174" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <ListBox x:Name="lbExpenses" HorizontalAlignment="Left" Height="200" Margin="263,70,0,0" VerticalAlignment="Top" Width="176" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Label x:Name="lblTotalIncome" Content="Total Income" HorizontalAlignment="Left" Margin="39,287,0,0" VerticalAlignment="Top" Width="86" Height="27"/>
+        <Label x:Name="lblCurrentBalance" Content="Current Balance" HorizontalAlignment="Left" Margin="39,331,0,0" VerticalAlignment="Top" Width="96" Height="31"/>
+        <Label x:Name="lblSearch" Content="Search" HorizontalAlignment="Left" Margin="39,374,0,0" VerticalAlignment="Top" Width="86"/>
+        <Label x:Name="lblTotalOutgoings" Content="Total Outgoings" HorizontalAlignment="Left" Margin="263,287,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="lblIncome" Content="" HorizontalAlignment="Left" Height="26" Margin="135,287,0,0" VerticalAlignment="Top" Width="52"/>
+        <Label x:Name="lblOutgoings" Content="" HorizontalAlignment="Center" Height="26" Margin="0,287,0,0" VerticalAlignment="Top" Width="64"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="110,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="90"/>
+        <Label x:Name="lblName" Content="Name" HorizontalAlignment="Left" Height="25" Margin="497,70,0,0" VerticalAlignment="Top" Width="49"/>
+        <Label x:Name="lblDate" Content="Date" HorizontalAlignment="Left" Height="30" Margin="497,111,0,0" VerticalAlignment="Top" Width="41"/>
+        <Label x:Name="lblAmount" Content="Amount" HorizontalAlignment="Left" Height="24" Margin="497,146,0,0" VerticalAlignment="Top" Width="59"/>
+        <RadioButton x:Name="radioIncome" Content="Income" HorizontalAlignment="Left" Margin="505,196,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="radioExpense" Content="Expense" HorizontalAlignment="Left" Margin="616,196,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="checkRecurring" Content="Recurring" HorizontalAlignment="Left" Margin="497,239,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Height="30" Margin="497,270,0,0" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Height="30" Margin="602,270,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="lblBalance" Content="" HorizontalAlignment="Left" Height="31" Margin="155,331,0,0" VerticalAlignment="Top" Width="58"/>
+        <TextBox HorizontalAlignment="Left" Margin="400,424,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
